@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zjta.wyb.widget.RatioImageView
+            android:id="@+id/rIvImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            app:imgRatio="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@mipmap/splash_bg" />
+
+        <TextView
+            android:id="@+id/tvItemType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/shape_rec_r2_bg"
+            android:paddingStart="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingEnd="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:backgroundTint="@color/btnPrimary"
+            tools:text="预约" />
+
+        <FrameLayout
+            android:id="@+id/flGroupMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_rec_r999_bg"
+            android:backgroundTint="#E26060"
+            android:padding="@dimen/dp_6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:minWidth="@dimen/dp_30"
+                android:minHeight="@dimen/dp_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:gravity="center"
+                android:lineHeight="@dimen/dp_11"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold"
+                tools:text="波币\n1.00" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ivGroupMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-12dp"
+            android:background="@mipmap/home_item_living_before"
+            app:layout_constraintBottom_toBottomOf="@+id/flGroupMoney"
+            app:layout_constraintLeft_toLeftOf="@+id/flGroupMoney"
+            app:layout_constraintRight_toRightOf="@id/flGroupMoney"
+            app:layout_constraintTop_toBottomOf="@+id/flGroupMoney" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="flGroupMoney,ivGroupMoney" />
+
+
+        <ImageView
+            android:id="@+id/ivVideoPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/home_item_living_play"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        tools:text="afdsfasdf" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/uc_avatar_default"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvNickName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#DBDBDB"
+            android:textSize="@dimen/sp_12"
+            tools:text="+861990023333" />
+
+        <TextView
+            android:id="@+id/tvViewNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_home_item_view_white"
+            android:drawablePadding="@dimen/dp_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            tools:text="1122" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:textColor="#959595"
+        android:textSize="@dimen/sp_12"
+        tools:text="fadfa" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20" />
+
+    <View
+        android:id="@+id/vBottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2" />
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.login.LoginActivity">
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftBtnVisible="true" />
+
+    <TextView
+        android:id="@+id/leftAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_29"
+        android:layout_marginTop="@dimen/dp_36"
+        android:text="输入验证码"
+        android:textColor="@color/LoginRegisterPrimaryColor"
+        android:textSize="@dimen/sp_23"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="短信验证码至"
+        android:textColor="#FF757575"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@+id/leftAlign"
+        app:layout_constraintTop_toBottomOf="@+id/leftAlign" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_6"
+        android:textColor="#FF292929"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTemp"
+        app:layout_constraintLeft_toRightOf="@+id/tvTemp" />
+
+
+    <com.jkb.vcedittext.VerificationCodeEditText
+        android:id="@+id/verifyCodeNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_47"
+        android:layout_marginEnd="@dimen/dp_29"
+        android:inputType="number"
+        android:textColor="@color/textColorPrimary29"
+        android:textSize="@dimen/sp_20"
+        app:bottomLineHeight="@dimen/dp_1"
+        app:bottomLineNormalColor="@color/dividerColor"
+        app:bottomLineSelectedColor="@color/colorAccent"
+        app:figures="6"
+        app:layout_constraintLeft_toLeftOf="@id/leftAlign"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhone"
+        app:selectedBackgroundColor="@color/colorAccent_alpha33"
+        app:verCodeMargin="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/tvCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:enabled="false"
+        android:textColor="@drawable/selector_text_color_enable_blue_disable_9e"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/leftAlign"
+        app:layout_constraintTop_toBottomOf="@+id/verifyCodeNum" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao'
+
+
+Properties prop = new Properties()
+prop.load(new FileInputStream(file("../key.properties")))
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+
+    defaultConfig {
+        applicationId "com.zjta.wyb"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+        }
+        renderscriptSupportModeEnabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    /*打包 gradlew resguardRelease*/
+    signingConfigs {
+        app {
+            storeFile file(prop['KEYSTORE_FILEPATH'])
+            storePassword prop['STORE_PASSWORD']
+            keyAlias prop['KEY_ALIAS']
+            keyPassword prop['KEY_PASSWORD']
+        }
+    }
+    buildTypes {
+        release {
+            Properties tempPro = new Properties()
+            tempPro.load(new FileInputStream(file("./release.properties")))
+            buildConfigField 'String', 'BASE_URL', tempPro['BASE_URL']
+
+            signingConfig signingConfigs.app
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.app
+            Properties tempPro = new Properties()
+            tempPro.load(new FileInputStream(file("./debug.properties")))
+            buildConfigField 'String', 'BASE_URL', tempPro['BASE_URL']
+        }
+    }
+    //渠道参数
+    /*flavorDimensions "default"
+    productFlavors {
+        wyb {
+            *//*Properties tempPro = new Properties()
+            tempPro.load(new FileInputStream(file("../debug.properties")))
+            buildConfigField 'String', 'QINIU_URL', prop['QINIU_URL']
+            buildConfigField 'String', 'BMOB_APPID', prop['BMOB_APPID']
+            buildConfigField 'String', 'BMOB_MASTER_KEY', prop['BMOB_MASTER_KEY']
+            buildConfigField 'String', 'BMOB_REST_API_KEY', prop['BMOB_REST_API_KEY']*//*
+        }
+    }*/
+
+    //配置腾讯云 App 打包参数
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        doNotStrip "*/armeabi/libYTCommon.so"
+        doNotStrip "*/armeabi-v7a/libYTCommon.so"
+        doNotStrip "*/x86/libYTCommon.so"
+        doNotStrip "*/arm64-v8a/libYTCommon.so"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5'
+
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle"/*RXLifecycle*/
+
+    /*Retrofit*/
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit2_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar' /*实时权限*/
+    implementation 'com.jakewharton.rxbinding4:rxbinding-core:4.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'/*Glide*/
+    implementation 'org.greenrobot:greendao:3.3.0'/*数据库*/
+    implementation 'org.greenrobot:eventbus:3.1.1'/*EventBus*/
+    implementation 'com.tencent.liteavsdk:LiteAVSDK_Smart:7.2.8925'
+
+
+    implementation 'com.tencent.liteavsdk:LiteAVSDK_Smart:7.2.8925'/*腾讯云直播*/
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'/*首页头部tab控件*/
+    implementation 'com.justkiddingbaby:vercodeedittext:1.1.0'/*验证码控件*/
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.0'/*首页下拉刷新足迹*/
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.0'    //经典刷新头
+    implementation 'top.littlefogcat.easydanmaku:easydanmaku:0.1.3'/*弹幕控件*/
+    implementation 'com.anbetter:danmukulight:1.0.1'/*弹幕控件*/
+    implementation 'me.relex:circleindicator:2.1.4'/*指示器*/
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.3'
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'//毛玻璃
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pop_share_window_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="分享到"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_14"
+        android:paddingEnd="@dimen/dp_14">
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/tvShareLink"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_normal_white"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"
+            android:text="复制链接"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_share_link"
+            app:topDrawableHeight="@dimen/dp_32"
+            app:topDrawableWidth="@dimen/dp_32" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/tvShareWechat"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_normal_white"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"
+            android:text="微信"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_share_wx_chat"
+            app:topDrawableHeight="@dimen/dp_32"
+            app:topDrawableWidth="@dimen/dp_32" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/tvShareQQ"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_normal_white"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"
+            android:text="QQ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_share_qq"
+            app:topDrawableHeight="@dimen/dp_32"
+            app:topDrawableWidth="@dimen/dp_32" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor" />
+
+    <TextView
+        android:id="@+id/tvShareCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_49"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+</LinearLayout>

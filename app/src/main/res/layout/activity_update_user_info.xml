@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zjta.wyb.ui.usercenter.UpdateUserInfoActivity"
+    tools:ignore="HardcodedText,ContentDescription">
+
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftBtnVisible="true"
+        app:titleText="编辑资料" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_106"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/dp_66"
+            android:layout_height="@dimen/dp_66"
+            android:layout_marginStart="@dimen/dp_16"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/uc_avatar_default" />
+
+
+        <TextView
+            android:id="@+id/vUpdateAvatar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_66"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="更换"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/vCreateVno"
+            android:layout_width="@dimen/dp_62"
+            android:layout_height="@dimen/dp_29"
+            android:background="@drawable/shape_rec_r4_bg"
+            android:backgroundTint="#FF993F"
+            android:gravity="center"
+            android:text="创建V号"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_16"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingEnd="@dimen/dp_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_14" />
+
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_weight="1"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="请输入昵称"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/vConfirm"
+            android:layout_width="@dimen/dp_62"
+            android:layout_height="@dimen/dp_29"
+            android:background="@drawable/selector_yellow_btn_r4_bg"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/selector_yellow_btn_text_color"
+            android:textSize="@dimen/sp_12"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.live.LivePlayerActivity">
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundColor="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftBtnDrawable="@mipmap/ic_back_white"
+        app:leftBtnVisible="true" />
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/mPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.anbetter.danmuku.DanMuView
+        android:id="@+id/danmakuContainerBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_62"
+        android:background="@color/black_alpha66"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginStart="@dimen/dp_16"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            tools:text="用户昵称" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_62"
+            android:drawableTop="@mipmap/live_bottom_attention"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_11"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_11"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/tvDanmaku"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_62"
+            android:drawableTop="@mipmap/live_bottom_danmaku"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_11"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_11"
+            android:text="弹幕"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/actionShare"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_62"
+            android:drawableTop="@mipmap/live_bottom_share"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_11"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_11"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/jumpToWindowShop"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_62"
+            android:drawableTop="@mipmap/live_bottom_shop"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_11"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_11"
+            android:text="下单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

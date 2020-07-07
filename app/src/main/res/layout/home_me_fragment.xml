@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription,HardcodedText">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/meAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_126"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.zjta.wyb.widget.DrawableTextView
+                    style="@style/uc_top_item"
+                    android:text="主页管理"
+                    app:topDrawable="@mipmap/uc_top_home"
+                    app:topDrawableHeight="@dimen/dp_50"
+                    app:topDrawableWidth="@dimen/dp_50" />
+
+                <com.zjta.wyb.widget.DrawableTextView
+                    android:id="@+id/actionRecharge"
+                    style="@style/uc_top_item"
+                    android:text="充值"
+                    app:topDrawable="@mipmap/uc_top_recharge"
+                    app:topDrawableHeight="@dimen/dp_50"
+                    app:topDrawableWidth="@dimen/dp_50" />
+
+                <com.zjta.wyb.widget.DrawableTextView
+                    style="@style/uc_top_item"
+                    android:text="任务"
+                    app:topDrawable="@mipmap/uc_top_task"
+                    app:topDrawableHeight="@dimen/dp_50"
+                    app:topDrawableWidth="@dimen/dp_50" />
+
+
+                <com.zjta.wyb.widget.DrawableTextView
+                    style="@style/uc_top_item"
+                    android:text="账号设置"
+                    app:topDrawable="@mipmap/uc_top_setting"
+                    app:topDrawableHeight="@dimen/dp_50"
+                    app:topDrawableWidth="@dimen/dp_50" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@drawable/shape_uc_item_title_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:text="我的订单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@mipmap/ic_uc_send"
+                app:itemTitle="待发货" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@mipmap/ic_uc_receive"
+                app:itemTitle="待收货" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@mipmap/ic_uc_comment"
+                app:itemTitle="待评价" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@mipmap/ic_uc_refund"
+                app:itemTitle="退款/售后" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@mipmap/ic_uc_attention"
+                app:itemTitle="关注的商家/服务商" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:id="@+id/actionCollect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@mipmap/ic_uc_comment"
+                app:itemTitle="收藏夹" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@drawable/shape_uc_item_title_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:text="我的主页"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_yellow"
+                app:itemTitle="开通V号" />
+
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_blue"
+                app:itemTitle="发布" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_blue"
+                app:itemTitle="内容管理" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_red"
+                app:itemTitle="留言管理" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@drawable/shape_uc_item_title_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:text="我的收益"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_yellow"
+                app:itemTitle="任务奖励" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_blue"
+                app:itemTitle="收支明细" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_blue"
+                app:itemTitle="零钱袋" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_blue"
+                app:itemTitle="波币" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_grey"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_blue"
+                app:itemTitle="分贝" />
+
+            <com.zjta.wyb.widget.UserCenterHomeItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:itemBackgroundDrawable="@drawable/ripple_uc_item_white"
+                app:itemDrawableStart="@drawable/shape_uc_item_before_red"
+                app:itemTitle="充值" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

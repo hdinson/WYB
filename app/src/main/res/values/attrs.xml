@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义标题栏-->
+    <declare-styleable name="CommonTitleBar">
+        <attr name="backgroundResource" format="reference" />
+        <!--最外层是否实现了fitsSystemWindows这个属性-->
+        <attr name="ancestorFitsSystemWindow" format="boolean" />
+
+        <attr name="leftBtnVisible" format="boolean" />
+        <attr name="leftBtnDrawable" format="reference|color" />
+
+        <attr name="rightBtnVisible" format="boolean" />
+        <attr name="rightBtnDrawable" format="reference|color" />
+
+        <attr name="titleText" format="string" />
+        <attr name="titleTextColor" format="color" />
+
+        <attr name="rightText" format="string" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightTextVisible" format="boolean" />
+
+
+
+    </declare-styleable>
+
+
+    <declare-styleable name="BottomBarItem">
+        <!--默认状态下的图标-->
+        <attr name="iconNormal" format="reference" />
+        <!--选中状态下的图标-->
+        <attr name="iconSelected" format="reference" />
+
+        <!--底部文字-->
+        <attr name="itemText" format="string" />
+        <!--文字大小-->
+        <attr name="itemTextSize" format="dimension" />
+        <!--默认状态下的文字颜色-->
+        <attr name="textColorNormal" format="color" />
+        <!--选中状态下的文字颜色-->
+        <attr name="textColorSelected" format="color" />
+
+        <!--文字和图标的顶部距离-->
+        <attr name="itemMarginTop" format="dimension" />
+
+        <!--是否开启触摸背景效果-->
+        <attr name="openTouchBg" format="boolean" />
+        <!--设置触摸背景-->
+        <attr name="touchDrawable" format="reference" />
+
+        <!--设置图标的宽度-->
+        <attr name="iconWidth" format="dimension" />
+        <!--设置图标的高度-->
+        <attr name="iconHeight" format="dimension" />
+
+        <!--设置BottomBarItem的padding-->
+        <attr name="itemPadding" format="dimension" />
+
+        <!--设置未读数字体大小-->
+        <attr name="unreadTextSize" format="dimension" />
+        <!--设置未读数字体颜色-->
+        <attr name="unreadTextColor" format="reference" />
+        <!--设置未读数背景色-->
+        <attr name="unreadTextBg" format="reference" />
+
+        <!--设置提示消息字体大小-->
+        <attr name="msgTextSize" format="dimension" />
+        <!--设置提示消息字体颜色-->
+        <attr name="msgTextColor" format="reference" />
+        <!--设置提示消息背景-->
+        <attr name="msgTextBg" format="reference" />
+
+        <!--设置提示点背景-->
+        <attr name="notifyPointBg" format="reference" />
+
+        <!--设置未读数组阈值 大于阈值的数字将显示为 n+ n为设置的阈值-->
+        <attr name="unreadThreshold" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomBarLayout">
+        <attr name="smoothScroll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LoftView">
+        <attr name="place" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+        </attr>
+        <attr name="background_top" format="color" />
+        <attr name="test" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="UserCenterHomeItem">
+        <attr name="itemBackgroundColor" format="color" />
+        <attr name="itemBackgroundDrawable" format="reference" />
+        <attr name="itemDrawableStart" format="reference" />
+        <attr name="itemTitle" format="string" />
+        <attr name="itemBubbleVisible" format="boolean" />
+        <attr name="itemDrawableStartVisible" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NormalImageView">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="leftDrawable" format="reference|color" />
+        <attr name="rightDrawable" format="reference|color" />
+        <attr name="topDrawable" format="reference|color" />
+        <attr name="bottomDrawable" format="reference|color" />
+
+        <attr name="leftDrawableWidth" format="reference|dimension" />
+        <attr name="rightDrawableWidth" format="reference|dimension" />
+        <attr name="topDrawableWidth" format="reference|dimension" />
+        <attr name="bottomDrawableWidth" format="reference|dimension" />
+
+        <attr name="leftDrawableHeight" format="reference|dimension" />
+        <attr name="rightDrawableHeight" format="reference|dimension" />
+        <attr name="topDrawableHeight" format="reference|dimension" />
+        <attr name="bottomDrawableHeight" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalYPosition" format="dimension" />
+        <attr name="startXPosition" format="dimension" />
+        <attr name="startToolbarPosition" format="dimension" />
+        <attr name="startHeight" format="dimension" />
+        <attr name="finalHeight" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TwoLevelHeader">
+        <attr name="srlMaxRate" format="float" />
+        <attr name="srlFloorRate" format="float" />
+        <attr name="srlRefreshRate" format="float" />
+        <attr name="srlFloorDuration" format="integer" />
+        <attr name="srlEnableRefresh" format="boolean" />
+        <attr name="srlEnableTwoLevel" format="boolean" />
+        <attr name="srlEnablePullToCloseTwoLevel" format="boolean" />
+    </declare-styleable>
+
+    <!--自定义标题栏-->
+    <declare-styleable name="RatioImageView">
+        <attr name="imgRatio" format="float" />
+    </declare-styleable>
+
+    <!--自定义标题栏-->
+    <declare-styleable name="RatioTextView">
+        <attr name="textRatio" format="float" />
+    </declare-styleable>
+
+
+</resources>

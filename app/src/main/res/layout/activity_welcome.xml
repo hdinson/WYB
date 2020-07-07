@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splash.WelcomeActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/circleIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ci_animator="@anim/welcome_indicator_scale"
+        app:ci_height="@dimen/dp_6"
+        app:ci_width="@dimen/dp_6"
+        app:ci_drawable="@drawable/shape_welcome_red_radius"
+        app:ci_orientation="horizontal"
+        app:ci_gravity="center"
+        app:ci_drawable_unselected="@drawable/white_radius"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="29dp"  />
+
+
+</FrameLayout>

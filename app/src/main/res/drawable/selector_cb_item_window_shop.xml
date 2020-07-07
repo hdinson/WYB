@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <item android:drawable="@mipmap/cb_window_shop_item_normal" android:state_checked="false" />
+
+    <item android:drawable="@mipmap/cb_window_shop_item_checked" android:state_checked="true" />
+
+</selector>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zjta.wyb.ui.usercenter.EditAddressActivity"
+    tools:ignore="HardcodedText,Autofill,RtlSymmetry">
+
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftBtnVisible="true"
+        app:titleText="收货地址" />
+
+
+    <LinearLayout style="@style/address_container">
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:text="收件人"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_12" />
+
+        <EditText
+            android:id="@+id/etAddressName"
+            style="@style/address_input"
+            android:hint="请输入收件人姓名"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/address_container">
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:text="联系方式"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_12" />
+
+        <EditText
+            android:id="@+id/etAddressPhone"
+            style="@style/address_input"
+            android:hint="请输入收件人联系方式"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/address_container">
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:text="邮编号码"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_12" />
+
+        <EditText
+            android:id="@+id/etAddressCode"
+            style="@style/address_input"
+            android:hint="请输入所在区邮编号码（可选填）"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/address_container">
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:text="所在地址"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tvAddressCity"
+            style="@style/address_input"
+            android:hint="请选择 省 / 市 / 区(县)" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/address_container">
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:text="详细地址"
+            android:textColor="@color/textColorPrimary29"
+            android:textSize="@dimen/sp_12" />
+
+        <EditText
+            android:id="@+id/etAddressDetail"
+            style="@style/address_input"
+            android:imeOptions="actionDone"
+            android:hint="请输入收件人详细地址(例如:街道/幢等)"
+            android:inputType="" />
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/vPostAddress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_49"
+        android:background="#FF993F"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

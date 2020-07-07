@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvDescPicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:minWidth="@dimen/dp_70"
+                    android:text="*商品图片"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12" />
+
+
+                <ImageView
+                    android:id="@+id/ivSelectImg"
+                    android:layout_width="@dimen/dp_138"
+                    android:layout_height="@dimen/dp_138"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:src="@mipmap/pic_load_square_default"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:text="(*仅需上传一张)"
+                    android:textColor="@color/textColorHint9e"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDescName"
+                    style="@style/goods_desc"
+                    android:text="*商品名称" />
+
+                <EditText
+                    android:id="@+id/etGoodsName"
+                    style="@style/goods_input"
+                    android:hint="请输入商品名称(必填)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDescBrand"
+                    style="@style/goods_desc"
+                    android:text="*品牌" />
+
+                <EditText
+                    android:id="@+id/etGoodsBrand"
+                    style="@style/goods_input"
+                    android:hint="请输入商品所属品牌(必填)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/goods_desc"
+                    android:text="包装" />
+
+                <EditText
+                    android:id="@+id/etGoodsPackaging"
+                    style="@style/goods_input"
+                    android:hint="请输入商品的包装方式(可选填)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDescSpec"
+                    style="@style/goods_desc"
+                    android:text="*规格" />
+
+                <EditText
+                    android:id="@+id/etGoodsSpec"
+                    style="@style/goods_input"
+                    android:hint="请输入商品的规格(如颜色/尺寸/款式等）" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/goods_desc"
+                    android:text="生产商" />
+
+                <EditText
+                    android:id="@+id/etGoodsFactory"
+                    style="@style/goods_input"
+                    android:hint="请输入商品所属生产商(可选填)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/goods_desc"
+                    android:text="净含量" />
+
+                <EditText
+                    android:id="@+id/etGoodsNetWeigh"
+                    style="@style/goods_input"
+                    android:hint="请输入商品净含量(可选填)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDescPrice"
+                    style="@style/goods_desc"
+                    android:text="*价格" />
+
+                <EditText
+                    android:id="@+id/etGoodsPrice"
+                    style="@style/goods_input"
+                    android:hint="请输入商品实际价格(必填)"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/goods_desc"
+                    android:text="其他说明" />
+
+                <EditText
+                    android:id="@+id/etGoodsIntroduce"
+                    style="@style/goods_input"
+                    android:hint="请输入其他补充说明"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/goods_desc"
+                    android:text="最大发售量" />
+
+                <EditText
+                    android:id="@+id/etGoodsMaxCount"
+                    style="@style/goods_input"
+                    android:backgroundTint="#FFFDE0"
+                    android:hint="未填写默认数量不限，等于库存量)"
+                    android:inputType="number"
+                    android:maxLines="8"
+                    android:singleLine="false"
+                    android:textColorHighlight="@color/btnPrimary" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_16" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/vToSave"
+        style="@style/big_btn_style"
+        android:text="保存" />
+</LinearLayout>

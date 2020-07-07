@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    tools:context="com.zjta.wyb.ui.live.PreparePusherActivity"
+    tools:ignore="HardcodedText">
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundResource="@color/black"
+        app:leftBtnDrawable="@mipmap/ic_back_white"
+        app:leftBtnVisible="true" />
+
+    <LinearLayout
+        android:id="@+id/llTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTimeHour"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:background="#28f7f7f7"
+            android:gravity="center"
+            android:text="00"
+            android:textColor="#ffff993f"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:text="时"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tvTimeMinutes"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:background="#28f7f7f7"
+            android:gravity="center"
+            android:text="00"
+            android:textColor="#ffff993f"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:text="分"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tvTimeSeconds"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:background="#28f7f7f7"
+            android:gravity="center"
+            android:text="00"
+            android:textColor="#ffff993f"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:text="秒"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTimeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="距离开播"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/vStartPush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:drawableTop="@drawable/ic_live_start_pusher"
+        android:drawablePadding="@dimen/dp_8"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_30"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="开播"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11" />
+
+
+    <TextView
+        android:id="@+id/vShowWinShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:drawableTop="@drawable/selector_live_pusher_window_show"
+        android:drawablePadding="@dimen/dp_6"
+        android:gravity="center"
+        android:padding="@dimen/dp_16"
+        android:text="橱窗"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11" />
+
+</RelativeLayout>

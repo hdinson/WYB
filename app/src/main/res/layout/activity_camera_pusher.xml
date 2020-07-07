@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjta.wyb.ui.live.CameraPusherActivity"
+    tools:ignore="HardcodedText">
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/mPusherView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundResource="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rightBtnDrawable="@drawable/ic_live_cancel_pusher"
+        app:rightBtnVisible="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_82"
+        android:background="#66000000"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:text="橱窗"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            app:topDrawable="@mipmap/live_pusher_toggle_camera"
+            app:topDrawableHeight="@dimen/dp_32"
+            app:topDrawableWidth="@dimen/dp_32" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/vToggleCamera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:text="镜头切换"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            app:topDrawable="@mipmap/live_pusher_toggle_camera"
+            app:topDrawableHeight="@dimen/dp_32"
+            app:topDrawableWidth="@dimen/dp_32" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistoryHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#212121" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="#FF212121"
+        app:expanded="false">
+
+
+        <RelativeLayout
+            android:id="@+id/llTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/black">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:background="@color/transparent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:scaleType="center"
+                android:src="@mipmap/ic_home_search"
+                tools:ignore="ContentDescription" />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/stlTopTeb"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:layout_centerInParent="true"
+                app:tl_indicator_color="@color/homeBtnSelectTextColor"
+                app:tl_indicator_corner_radius="@dimen/dp_2"
+                app:tl_indicator_height="@dimen/dp_2"
+                app:tl_indicator_width="@dimen/dp_12"
+                app:tl_tab_space_equal="true"
+                app:tl_tab_width="@dimen/dp_50"
+                app:tl_textBold="SELECT"
+                app:tl_textsize="@dimen/sp_14" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@color/transparent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:scaleType="center"
+                android:src="@mipmap/ic_home_sort"
+                android:visibility="invisible"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpHomeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

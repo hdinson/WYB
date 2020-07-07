@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rec_r8_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/dialogText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="10dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="35dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="35dp"
+        android:textColor="@color/textColorPrimary29"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialogLeftBtn"
+            android:layout_width="0dp"
+            android:layout_height="46.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="取消"
+            android:textColor="#fc6d81"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/leftRightDivider"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/dividerColor" />
+
+        <TextView
+            android:id="@+id/dialogRightBtn"
+            android:layout_width="0dp"
+            android:layout_height="46.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="确定"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

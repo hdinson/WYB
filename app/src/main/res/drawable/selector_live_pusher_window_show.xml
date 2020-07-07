@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <item android:state_enabled="true">
+        <vector android:width="32dp" android:height="32dp" android:viewportWidth="32" android:viewportHeight="32">
+            <path android:fillColor="#2a62e8" android:pathData="M16,0L16,0A16,16 0,0 1,32 16L32,16A16,16 0,0 1,16 32L16,32A16,16 0,0 1,0 16L0,16A16,16 0,0 1,16 0z" />
+            <path android:fillColor="#fff" android:pathData="M22.758,7.5L9.241,7.5A1.742,1.742 0,0 0,7.5 9.241L7.5,22.76a1.742,1.742 0,0 0,1.741 1.741L22.759,24.501a1.742,1.742 0,0 0,1.741 -1.741L24.5,9.24A1.743,1.743 0,0 0,22.758 7.5ZM21.218,12.331l-0.036,0.019 0,0.041a5.232,5.232 0,0 1,-10.357 0L10.815,12.348l-0.036,-0.019A0.808,0.808 0,1 1,11.996 11.638a0.8,0.8 0,0 1,-0.3 0.619l-0.038,0.03 0.008,0.048a4.39,4.39 0,0 0,8.671 0l0.008,-0.047 -0.037,-0.03a0.8,0.8 0,0 1,-0.3 -0.619,0.814 0.814,0 0,1 0.813,-0.813h0a0.8,0.8 0,0 1,0.4 1.5Z" />
+        </vector>
+
+    </item>
+    <item android:state_enabled="false">
+        <vector android:width="32dp" android:height="32dp" android:viewportWidth="32" android:viewportHeight="32">
+            <path android:fillAlpha="0.5" android:fillColor="#2a62e8" android:pathData="M16,0L16,0A16,16 0,0 1,32 16L32,16A16,16 0,0 1,16 32L16,32A16,16 0,0 1,0 16L0,16A16,16 0,0 1,16 0z" />
+            <path android:fillAlpha="0.5" android:fillColor="#fff" android:pathData="M22.758,7.5L9.241,7.5A1.742,1.742 0,0 0,7.5 9.241L7.5,22.76a1.742,1.742 0,0 0,1.741 1.741L22.759,24.501a1.742,1.742 0,0 0,1.741 -1.741L24.5,9.24A1.743,1.743 0,0 0,22.758 7.5ZM21.218,12.331l-0.036,0.019 0,0.041a5.232,5.232 0,0 1,-10.357 0L10.815,12.348l-0.036,-0.019A0.808,0.808 0,1 1,11.996 11.638a0.8,0.8 0,0 1,-0.3 0.619l-0.038,0.03 0.008,0.048a4.39,4.39 0,0 0,8.671 0l0.008,-0.047 -0.037,-0.03a0.8,0.8 0,0 1,-0.3 -0.619,0.814 0.814,0 0,1 0.813,-0.813h0a0.8,0.8 0,0 1,0.4 1.5Z" />
+        </vector>
+    </item>
+</selector>

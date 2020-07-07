@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:background="#3F3F40"
+    android:elevation="@dimen/dp_5"
+    android:orientation="horizontal">
+
+
+    <EditText
+        android:id="@+id/etDanmakuText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_weight="1"
+        android:background="@drawable/live_bottom_edit_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:hint="输入文字"
+        android:inputType="text"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        android:textColorHint="#AEAFAF"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvDoSend"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="发送"
+        android:textColor="#9F9FA0"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

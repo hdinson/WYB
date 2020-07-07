@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_44">
+
+    <ImageButton
+        android:id="@+id/ibTitleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:onClick="onTitleLeftBtnClick"
+        android:paddingStart="@dimen/dp_13"
+        android:paddingEnd="@dimen/dp_2"
+        android:src="@mipmap/ic_back_black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvTitleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxWidth="@dimen/dp_160"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibTitleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        android:visibility="gone"
+        app:layout_constraintRight_toLeftOf="@+id/tvTitleRight"
+        app:layout_goneMarginEnd="@dimen/dp_8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

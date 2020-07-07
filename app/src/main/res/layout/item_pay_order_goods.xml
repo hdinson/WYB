@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/dp_16"
+    tools:background="@color/white"
+    tools:ignore="RtlSymmetry">
+
+    <ImageView
+        android:id="@+id/ivGoods"
+        android:layout_width="@dimen/dp_96"
+        android:layout_height="@dimen/dp_96"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/tvGoodsName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:textColor="@color/textColorPrimary29"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@+id/ivGoods"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="钟薛高甜蜜系列丝绒可可*10巧克力冰激凌冷饮雪糕冰棒雪冰棒雪冰" />
+
+
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="#fff5a623"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivGoods"
+        app:layout_constraintLeft_toLeftOf="@+id/tvGoodsName"
+        tools:text="￥150.00" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorSecond75"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvMoney"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="x2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

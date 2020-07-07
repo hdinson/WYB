@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="@dimen/dp_5"
+    tools:id="@+id/rootView">
+
+    <TextView
+        android:id="@+id/tvItemAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@mipmap/ic_address_manager_edit"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:lineHeight="@dimen/dp_20"
+        android:minHeight="@dimen/dp_75"
+        android:paddingStart="@dimen/dp_30"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_24"
+        android:paddingBottom="@dimen/dp_8"
+        android:textSize="@dimen/sp_12"
+        tools:text="Moumou   13502021326\n福建号楼运楼央运营区号楼运楼央运营区号楼运楼央运营区6号楼 362000" />
+
+
+</FrameLayout>

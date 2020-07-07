@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".ui.daigou.CreateDaiGouOddActivity"
+            tools:ignore="Autofill,RtlSymmetry,HardcodedText">
+
+            <ImageView
+                android:id="@+id/ivSelectImg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#ffc2c2c2"
+                android:scaleType="centerCrop" />
+
+            <com.zjta.wyb.widget.StreamerInfoLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_128" />
+
+
+                <EditText
+                    android:id="@+id/etTitleName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="请输入发起内容的相关标题"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toRightOf="@id/guideline"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/temp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标题内容:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etTitleName"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="请输入地址"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@id/etTitleName"
+                    app:layout_constraintRight_toRightOf="@id/etTitleName"
+                    app:layout_constraintTop_toBottomOf="@+id/etTitleName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目标位置:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etAddress"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+
+                <EditText
+                    android:id="@+id/etStoreName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="请输入商家名称"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@id/etTitleName"
+                    app:layout_constraintRight_toRightOf="@id/etTitleName"
+                    app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目标商家:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etStoreName"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+                <EditText
+                    android:id="@+id/etGoodsName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="请输入品名/服务"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@id/etTitleName"
+                    app:layout_constraintRight_toRightOf="@id/etTitleName"
+                    app:layout_constraintTop_toBottomOf="@+id/etStoreName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目标商品:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etGoodsName"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+
+                <EditText
+                    android:id="@+id/etPrice1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="0.00"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@id/etTitleName"
+                    app:layout_constraintRight_toLeftOf="@+id/middle"
+                    app:layout_constraintTop_toBottomOf="@+id/etGoodsName" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目标价位:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etPrice1"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+
+                <TextView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    app:layout_constraintBaseline_toBaselineOf="@id/etPrice1"
+                    app:layout_constraintLeft_toLeftOf="@id/etPrice1" />
+
+                <TextView
+                    android:id="@+id/middle"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="—"
+                    app:layout_constraintBaseline_toBaselineOf="@id/etPrice1"
+                    app:layout_constraintLeft_toRightOf="@+id/etPrice1"
+                    app:layout_constraintRight_toLeftOf="@+id/etPrice2" />
+
+                <EditText
+                    android:id="@+id/etPrice2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="0.00"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toRightOf="@id/middle"
+                    app:layout_constraintRight_toRightOf="@id/etTitleName"
+                    app:layout_constraintTop_toBottomOf="@+id/etGoodsName" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    app:layout_constraintBaseline_toBaselineOf="@id/etPrice2"
+                    app:layout_constraintLeft_toLeftOf="@id/etPrice2" />
+
+                <TextView
+                    android:id="@+id/tvInputDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="请选择年/月/日"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@id/etTitleName"
+                    app:layout_constraintRight_toLeftOf="@+id/tvTimeStart"
+                    app:layout_constraintTop_toBottomOf="@+id/etPrice1" />
+
+
+                <TextView
+                    android:id="@+id/tvTimeStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00：00"
+                    android:textColor="#C2C2C2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvInputDate"
+                    app:layout_constraintLeft_toRightOf="@+id/tvInputDate"
+                    app:layout_constraintRight_toLeftOf="@+id/middle2" />
+
+                <TextView
+                    android:id="@+id/middle2"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="—"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tvInputDate"
+                    app:layout_constraintLeft_toRightOf="@+id/tvTimeStart"
+                    app:layout_constraintRight_toLeftOf="@+id/tvTimeEnd" />
+
+                <TextView
+                    android:id="@+id/tvTimeEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00：00"
+                    android:textColor="#C2C2C2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvInputDate"
+                    app:layout_constraintLeft_toRightOf="@+id/middle2"
+                    app:layout_constraintRight_toRightOf="@id/etTitleName" />
+
+                <TextView
+                    android:id="@+id/temp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预约时间:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tvInputDate"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:text="*"
+                    android:textColor="#FF3F3F"
+                    app:layout_constraintBaseline_toBaselineOf="@id/temp1"
+                    app:layout_constraintRight_toLeftOf="@id/temp1" />
+
+
+                <EditText
+                    android:id="@+id/etMoney"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_edit_text_bg"
+                    android:hint="请输入金额(单位:波币）"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:textColorHint="#c2c2c2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@id/etTitleName"
+                    app:layout_constraintRight_toRightOf="@id/etTitleName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInputDate" />
+
+                <TextView
+                    android:id="@+id/tvMoneyCover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:text="折合人民币: 11元"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@+id/etMoney"
+                    app:layout_constraintTop_toBottomOf="@+id/etMoney" />
+
+
+                <TextView
+                    android:id="@+id/temp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\@播服务费:"
+                    android:textColor="@color/textColorPrimary29"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etMoney"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:text="*"
+                    android:textColor="#FF3F3F"
+                    app:layout_constraintBaseline_toBaselineOf="@id/temp2"
+                    app:layout_constraintRight_toLeftOf="@id/temp2" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/shape_rec_r4_bg"
+                    android:gravity="top"
+                    android:hint="输入代购及其产品相关说明……"
+                    android:lines="4"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:textColorHint="#C2C2C2"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintLeft_toLeftOf="@+id/temp3"
+                    app:layout_constraintRight_toRightOf="@+id/etTitleName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMoneyCover" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="#fff7f7f7"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="\@播说明："
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:drawableStart="@drawable/shape_recharge_info_point"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:text="\@播服务费即支付给现场代购者的专享服务费。"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:drawableStart="@drawable/shape_recharge_info_point"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:text="\@播者(A)与代购者(B)共同定价，并平分代购现场直播中后续参与者的服务费。"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:drawableStart="@drawable/shape_recharge_info_point"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:text="后续参与者代购服务费：价格=(A+B)÷2。"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:drawableStart="@drawable/shape_recharge_info_point"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:text="\@播者(A)未设置，系统默认设置为全程免费"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginTop="@dimen/dp_25"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/actionSendOrr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#2A62E8"
+                    android:gravity="center"
+                    android:text="发布预约"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/actionSendGood"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FF993F"
+                    android:gravity="center"
+                    android:text="发布预告"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.zjta.wyb.widget.titlebar.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundColor="@color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftBtnDrawable="@mipmap/ic_back_white"
+        app:leftBtnVisible="true" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

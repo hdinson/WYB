@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llFitsSystem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <com.zjta.wyb.widget.NoScrollViewPager
+        android:id="@+id/vpContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.zjta.wyb.widget.bottomrarlayout.BottomBarLayout
+        android:id="@+id/bottomBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="bottom"
+        android:background="@color/black"
+        android:gravity="center"
+        app:smoothScroll="false"
+        android:orientation="horizontal">
+
+        <com.zjta.wyb.widget.bottomrarlayout.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/ic_home_main_normal"
+            app:iconSelected="@mipmap/ic_home_main_select"
+            app:itemText="首页"
+            app:itemTextSize="@dimen/sp_12"
+            app:textColorNormal="@color/white"
+            app:textColorSelected="@color/homeBtnSelectTextColor" />
+
+
+        <com.zjta.wyb.widget.bottomrarlayout.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/ic_home_appointment_normal"
+            app:iconSelected="@mipmap/ic_home_appointment_select"
+            app:itemText="有约"
+            app:itemTextSize="@dimen/sp_12"
+            app:textColorNormal="@color/white"
+            app:textColorSelected="@color/homeBtnSelectTextColor" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@mipmap/ic_home_middle" />
+
+
+        <com.zjta.wyb.widget.bottomrarlayout.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/ic_home_message_normal"
+            app:iconSelected="@mipmap/ic_home_message_select"
+            app:itemText="消息"
+            app:itemTextSize="@dimen/sp_12"
+            app:textColorNormal="@color/white"
+            app:textColorSelected="@color/homeBtnSelectTextColor" />
+
+        <com.zjta.wyb.widget.bottomrarlayout.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@mipmap/ic_home_v_normal"
+            app:iconSelected="@mipmap/ic_home_v_select"
+            app:itemText="管理"
+            app:itemTextSize="@dimen/sp_12"
+            app:textColorNormal="@color/white"
+            app:textColorSelected="@color/homeBtnSelectTextColor" />
+
+    </com.zjta.wyb.widget.bottomrarlayout.BottomBarLayout>
+
+
+</LinearLayout>

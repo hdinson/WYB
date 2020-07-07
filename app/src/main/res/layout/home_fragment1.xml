@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_144"
+        android:background="#FF212121"
+        app:expanded="false">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            app:layout_scrollFlags="scroll|snap|enterAlwaysCollapsed">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHistoryHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:id="@+id/llTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:scaleType="center"
+                android:src="@mipmap/ic_home_search"
+                tools:ignore="ContentDescription" />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/stlTopTeb"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                app:tl_indicator_color="@color/btnPrimary"
+                app:tl_indicator_corner_radius="@dimen/dp_2"
+                app:tl_indicator_height="@dimen/dp_2"
+                app:tl_indicator_width="@dimen/dp_12"
+                app:tl_tab_space_equal="true"
+                app:tl_textBold="SELECT"
+                app:tl_textsize="@dimen/sp_14" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:scaleType="center"
+                android:src="@mipmap/ic_home_sort"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpHomeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

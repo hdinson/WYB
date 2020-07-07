@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_102"
+    android:layout_margin="@dimen/dp_6"
+    android:elevation="@dimen/dp_5"
+    app:cardCornerRadius="@dimen/dp_8"
+    app:cardElevation="@dimen/dp_0"
+    tools:ignore="HardcodedText">
+
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:realtimeBlurRadius="20dp"
+        app:realtimeOverlayColor="#99000000" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_6"
+        android:paddingEnd="@dimen/dp_6">
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:id="@+id/vPopDaiYou"
+            android:text="带游(测试拉流)"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_home_bottom_pop_tour"
+            app:topDrawableHeight="@dimen/dp_30"
+            app:topDrawableWidth="@dimen/dp_30" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:text="拼团(测试推流)"
+            android:id="@+id/vPopPingTuan"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_home_bottom_pop_pin"
+            app:topDrawableHeight="@dimen/dp_30"
+            app:topDrawableWidth="@dimen/dp_30" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/vPopDaiGou"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:text="代购"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_home_bottom_pop_shop"
+            app:topDrawableHeight="@dimen/dp_30"
+            app:topDrawableWidth="@dimen/dp_30" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/vPopFindGoods"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:text="找货(测试界面)"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_home_bottom_pop_find"
+            app:topDrawableHeight="@dimen/dp_30"
+            app:topDrawableWidth="@dimen/dp_30" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:text="照片"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_home_bottom_pop_photo"
+            app:topDrawableHeight="@dimen/dp_30"
+            app:topDrawableWidth="@dimen/dp_30" />
+
+        <com.zjta.wyb.widget.DrawableTextView
+            android:id="@+id/vPopVideo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center"
+            android:text="短视频"
+            android:textColor="#80FFFFFF"
+            android:textSize="@dimen/sp_12"
+            app:topDrawable="@mipmap/ic_home_bottom_pop_video"
+            app:topDrawableHeight="@dimen/dp_30"
+            app:topDrawableWidth="@dimen/dp_30" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

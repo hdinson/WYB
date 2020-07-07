@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_78"
+    android:background="@color/white"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/ivOrderStreamAvatar"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_16"
+        android:elevation="@dimen/dp_5"
+        android:padding="@dimen/dp_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvStreamerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_9"
+        android:layout_marginTop="@dimen/dp_4"
+        android:maxWidth="@dimen/dp_150"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/textColorPrimary29"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@+id/ivOrderStreamAvatar"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderStreamAvatar"
+        tools:text="Yara Barros" />
+
+    <TextView
+        android:id="@+id/tvStreamerType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rec_r2_bg"
+        android:backgroundTint="#FEB938"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingEnd="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="用户指数:A+"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivOrderStreamAvatar"
+        app:layout_constraintLeft_toLeftOf="@id/tvStreamerName"
+        app:layout_constraintTop_toBottomOf="@id/tvStreamerName" />
+
+
+    <TextView
+        android:id="@+id/tvHeartNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:drawableStart="@mipmap/ic_streamer_info_heart"
+        android:textColor="@color/textColorSecond75"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvStreamerType"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="304" />
+
+    <TextView
+        android:id="@+id/tvViewNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:drawableStart="@mipmap/ic_streamer_info_view"
+        android:textColor="@color/textColorSecond75"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvHeartNum"
+        app:layout_constraintRight_toLeftOf="@+id/tvHeartNum"
+        tools:text="304" />
+
+    <TextView
+        android:id="@+id/tvHonestNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:drawableStart="@mipmap/ic_streamer_info_honest"
+        android:textColor="@color/textColorSecond75"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvHeartNum"
+        app:layout_constraintRight_toLeftOf="@+id/tvViewNum"
+        tools:text="3A" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
