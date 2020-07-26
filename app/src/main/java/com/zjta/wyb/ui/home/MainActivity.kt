@@ -8,7 +8,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.view.Gravity
 import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +17,6 @@ import android.widget.FrameLayout
 import android.widget.PopupWindow
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.load.model.DataUrlLoader
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.zjta.wyb.BuildConfig
 import com.zjta.wyb.R
@@ -30,12 +28,9 @@ import com.zjta.wyb.entity.TestStreamPusher
 import com.zjta.wyb.http.BaseObserver
 import com.zjta.wyb.http.HttpHelper
 import com.zjta.wyb.http.RxSchedulers
-import com.zjta.wyb.kotlin.dip
-import com.zjta.wyb.kotlin.screenHeight
 import com.zjta.wyb.kotlin.toast
 import com.zjta.wyb.ui.TestActivity
 import com.zjta.wyb.ui.daigou.CreateDaiGouOddActivity
-import com.zjta.wyb.ui.live.CameraPusherActivity
 import com.zjta.wyb.ui.live.LivePlayerActivity
 import com.zjta.wyb.ui.live.PreparePusherActivity
 import com.zjta.wyb.ui.login.LoginActivity
@@ -46,13 +41,13 @@ import com.zjta.wyb.widget.bottomrarlayout.OnOtherViewClickListener
 import com.zjta.wyb.widget.dialog.DialogCancelConfirm
 import com.zjta.wyb.widget.dialog.OnOperationClickListener
 import com.zjta.wyb.widget.smartpopupwindow.SmartPopupWindow
-import com.zjta.wyb.widget.smartpopupwindow.VerticalPosition
 import com.zjta.wyb.widget.smartpopupwindow.VerticalPosition.ABOVE
 import com.zjta.wyb.widget.smartpopupwindow.VerticalPosition.CENTER
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : BaseActivity(), OnOtherViewClickListener, PopupWindow.OnDismissListener, View.OnClickListener {
+class MainActivity : BaseActivity(), OnOtherViewClickListener, PopupWindow.OnDismissListener,
+    View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +57,12 @@ class MainActivity : BaseActivity(), OnOtherViewClickListener, PopupWindow.OnDis
 
     private fun initUI() {
         //设置ViewPager
-        val fragmentList = arrayListOf<Fragment>(HomeFragment(), AppointmentFragment(), MessageFragment(), MeFragment())
+        val fragmentList = arrayListOf<Fragment>(
+            HomeFragment(),
+            AppointmentFragment(),
+            MessageFragment(),
+            MeFragment()
+        )
         val mViewPagerAdapter = CommonFragmentPagerAdapter(fragmentList, supportFragmentManager)
         vpContent.adapter = mViewPagerAdapter
         vpContent.overScrollMode = View.OVER_SCROLL_NEVER
@@ -169,35 +169,46 @@ class MainActivity : BaseActivity(), OnOtherViewClickListener, PopupWindow.OnDis
         when (v.id) {
             R.id.vPopDaiYou -> {
 
-                RxPermissions(this).request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA,
-                                            Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_PHONE_STATE)
+                RxPermissions(this).request(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA,
+                    Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_PHONE_STATE
+                )
                     .subscribe {
                         if (it) {
                             //测试拉流
                             val et = EditText(this)
                             et.hint = "请输入流名称"
-                            AlertDialog.Builder(this).setTitle("流设置").setView(et).setPositiveButton("确定") { dialog, _ ->
-                                dialog.dismiss()
+                            AlertDialog.Builder(this).setTitle("流设置").setView(et)
+                                .setPositiveButton("确定") { dialog, _ ->
+                                    dialog.dismiss()
 
-                                val streamName = et.text.toString()
-                                if (StringUtils.isEmpty(streamName)) return@setPositiveButton
-                                HttpHelper.create(LivePlayerApi::class.java).getPullFlowText(streamName)
-                                    .compose(RxSchedulers.io_main())
-                                    .subscribe(object : BaseObserver<TestStreamPusher>(v.context) {
-                                        override fun onHandleSuccess(t: TestStreamPusher?, message: String) {
-                                            if (t == null || StringUtils.isEmpty(t.playUrlRtmp)) "服务器错误".toast()
-                                            LivePlayerActivity.start(v.context, t!!.playUrlRtmp)
-                                        }
-                                    })
-                            }.setNegativeButton("取消", null).show()
+                                    val streamName = et.text.toString()
+                                    if (StringUtils.isEmpty(streamName)) return@setPositiveButton
+                                    HttpHelper.create(LivePlayerApi::class.java)
+                                        .getPullFlowText(streamName)
+                                        .compose(RxSchedulers.io_main())
+                                        .subscribe(object :
+                                            BaseObserver<TestStreamPusher>(v.context) {
+                                            override fun onHandleSuccess(
+                                                t: TestStreamPusher?,
+                                                message: String
+                                            ) {
+                                                if (t == null || StringUtils.isEmpty(t.playUrlRtmp)) "服务器错误".toast()
+                                                LivePlayerActivity.start(v.context, t!!.playUrlRtmp)
+                                            }
+                                        })
+                                }.setNegativeButton("取消", null).show()
                         } else {
-                            DialogCancelConfirm(this).setMessage("未授权权限，部分功能不能使用，请前往设置打开权限").setButtonText("取消", "前往")
+                            DialogCancelConfirm(this).setMessage("未授权权限，部分功能不能使用，请前往设置打开权限")
+                                .setButtonText("取消", "前往")
                                 .setOperationListener(OnOperationClickListener { dialog, isLeft ->
                                     if (isLeft) {
                                         dialog.dismiss()
                                     } else {
-                                        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-                                        intent.data = Uri.parse("package:${BuildConfig.APPLICATION_ID}")
+                                        val intent =
+                                            Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                                        intent.data =
+                                            Uri.parse("package:${BuildConfig.APPLICATION_ID}")
                                         startActivity(intent)
                                     }
                                 }).show()
@@ -212,8 +223,18 @@ class MainActivity : BaseActivity(), OnOtherViewClickListener, PopupWindow.OnDis
                 PreparePusherActivity.start(v.context, room)
             }
             R.id.vPopDaiGou -> CreateDaiGouOddActivity.start(v.context)
-            R.id.vPopVideo -> startActivity(Intent(this@MainActivity, LivePlayerActivity::class.java))
-            R.id.vPopFindGoods->v.context.startActivity(Intent(v.context,TestActivity::class.java))
+            R.id.vPopVideo -> startActivity(
+                Intent(
+                    this@MainActivity,
+                    LivePlayerActivity::class.java
+                )
+            )
+            R.id.vPopFindGoods -> v.context.startActivity(
+                Intent(
+                    v.context,
+                    TestActivity::class.java
+                )
+            )
             else -> {
             }
         }

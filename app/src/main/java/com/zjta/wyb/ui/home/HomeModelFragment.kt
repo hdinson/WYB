@@ -17,7 +17,6 @@ import com.zjta.wyb.http.RxSchedulers
 import com.zjta.wyb.kotlin.dip
 import com.zjta.wyb.kotlin.loge
 import com.zjta.wyb.utils.DateUtils
-import com.zjta.wyb.utils.LogUtils
 import com.zjta.wyb.widget.recycleview.CommonAdapter
 import com.zjta.wyb.widget.recycleview.StaggeredItemDecoration
 import io.reactivex.Observable

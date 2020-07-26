@@ -67,7 +67,7 @@ class UpdateUserInfoActivity : BaseActivity() {
         vConfirm.click { doUpdateUserName(etUserName.text.toString()) }
         ivAvatar.click { showPicSelector() }
         vUpdateAvatar.click { showPicSelector() }
-        vCreateVno.click{ }
+        vCreateVno.click { }
     }
 
     /**
@@ -104,7 +104,8 @@ class UpdateUserInfoActivity : BaseActivity() {
                 PictureConfig.CHOOSE_REQUEST -> {
                     val selectList = PictureSelector.obtainMultipleResult(data)
                     if (selectList.isEmpty()) return
-                    val path = if (selectList[0].isCompressed) selectList[0].compressPath else selectList[0].path
+                    val path =
+                        if (selectList[0].isCompressed) selectList[0].compressPath else selectList[0].path
                     postToServer(File(path))
                 }
             }
